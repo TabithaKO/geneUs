@@ -1,7 +1,7 @@
 function breakMaps() {
     DNAlist = []
     var lines = prompt("Enter a sequence: ")
-    var maplength = 4;
+    var maplength = 3;
     var char = lines.split("")
     var length = char.length
     for (i = 0; i + maplength < length; i++) {
@@ -10,20 +10,21 @@ function breakMaps() {
         maplength += 1
     }
     var newList = []
-    DNAlist.forEach(function(group){
+    DNAlist.forEach(function (group) {
         var joined = group.join("")
         newList.push(joined)
     })
-    
-}
- function createCounter(newList){
-    dnaCounter = {}
-    newlist.forEach(function(nucleotide){
-        if(nucleotide in dnaCounter){
-            dnaCounter[nucleotide] = dnaCounter[nucleotide]+= 1
-        }else{
-            dnaCounter[nucleotide] = 1
-        }
-        alert(dnaCounter)
-    })
+
+
+    function createCounter() {
+        dnaCounter = {}
+        newList.forEach(function (nucleotide) {
+            if (nucleotide in dnaCounter) {
+                dnaCounter[nucleotide] = dnaCounter[nucleotide] += 1
+            } else {
+                dnaCounter[nucleotide] = 1
+            }
+        })
+    }
+    return createCounter();
 }
