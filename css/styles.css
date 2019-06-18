@@ -4,3 +4,10 @@ header{
     background-size: cover;
     height: 100vh;
 }
+#whyus{
+    background-image: url("../images/gene4.jpg");
+    background-size: cover;
+    height: 50vh;
+    text-align: center;
+    color: white;
+}
