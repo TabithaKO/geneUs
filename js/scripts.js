@@ -1,13 +1,14 @@
 function breakMaps() {
-    DNAlist = []
-    var lines = prompt("Enter a sequence: ")
+    var newList = [];
+    var DNAlist = [];
+    var lines = prompt("Enter a sequence: ");
     var maplength = 3;
-    var char = lines.split("")
-    var length = char.length
+    var char = lines.split("");
+    var length = char.length;
     for (i = 0; i + maplength < length; i++) {
-        var DNAslice = char.slice(i, maplength)
-        DNAlist.push(DNAslice)
-        maplength += 1
+        var DNAslice = char.slice(i, maplength);
+        DNAlist.push(DNAslice);
+        maplength += 1;
     }
     var newList = []
     DNAlist.forEach(function (group) {
