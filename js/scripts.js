@@ -10,23 +10,22 @@ function breakMaps() {
         DNAlist.push(DNAslice);
         maplength += 1;
     }
-
+    var newList = []
     DNAlist.forEach(function (group) {
-        var joined = group.join("");
-        newList.push(joined);
+        var joined = group.join("")
+        newList.push(joined)
     })
 
+
     function createCounter() {
-        dnaCounter = {};
+        dnaCounter = {}
         newList.forEach(function (nucleotide) {
             if (nucleotide in dnaCounter) {
-                dnaCounter[nucleotide] = dnaCounter[nucleotide] += 1;
+                dnaCounter[nucleotide] = dnaCounter[nucleotide] += 1
             } else {
-                dnaCounter[nucleotide] = 1;
+                dnaCounter[nucleotide] = 1
             }
-            alert(dnaCounter[nucleotide]);
         })
     }
     return createCounter();
 }
-breakMaps()
