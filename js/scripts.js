@@ -14,5 +14,16 @@ function breakMaps() {
         var joined = group.join("")
         newList.push(joined)
     })
-    return(newList)
+    
+}
+ function createCounter(newList){
+    dnaCounter = {}
+    newlist.forEach(function(nucleotide){
+        if(nucleotide in dnaCounter){
+            dnaCounter[nucleotide] = dnaCounter[nucleotide]+= 1
+        }else{
+            dnaCounter[nucleotide] = 1
+        }
+        alert(dnaCounter)
+    })
 }
