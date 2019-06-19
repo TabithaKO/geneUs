@@ -1,9 +1,15 @@
+var DNA = ""
+
+var mySequence = function(){
+    DNA = DNA + document.getElementById("sequence").value 
+    return (DNA)
+   }
+   
 function breakMaps() {
     var newList = [];
     var DNAlist = [];
-    var lines = prompt("Enter a sequence: ");
     var maplength = 3;
-    var char = lines.split("");
+    var char = DNA.split("");
     var length = char.length;
     for (i = 0; i + maplength < length; i++) {
         var DNAslice = char.slice(i, maplength);
