@@ -1,6 +1,7 @@
 var DNA = ""
 
-var mySequence = function(){
+var mySequence = function(e){
+    e.preventDefault()
     DNA = DNA + document.getElementById("sequence").value 
     return (DNA)
    }
