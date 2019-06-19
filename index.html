@@ -2,22 +2,18 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/jquery-3.4.1.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="js/bootbox.js"></script>
-  <script src="js/scripts.js"></script>
-  <title>geneUs</title>
-  <form action="js/scripts.js" method="post" enctype="multipart/form-data">
-    <label for="file">Input a file:</label>
-    <input type="file" name="file1" />
-    <input type="submit" value="submit">
-  </form>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootbox.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>geneUs</title>
 </head>
 
 <body>
@@ -49,6 +45,12 @@
             <h1 id="centre">
             <h1>geneUs</h1>
                 </h1>
+                <form id="file">
+                    <!-- <label>INPUT A TEXT</label> -->
+                    <p>INPUT A TEXT</p>
+                    <textarea id="sequence"></textarea>
+                    <input type="submit" value="submit">
+                    </form>
         </header>
         
         <section id="about" class="container">
@@ -64,7 +66,9 @@
             <h2>WHY geneUs?</h2>
             <p>We all know how genetic sequencing is very expensive, this has made it difficult for the society to get access to resources</p>
             <p>The accessibility to technology is tedious especially for an average Mwananchi</p>
-      </section>
+        </section>
+        <div class="container"
+      <div id=diseases>
       <div class="first-disease">
         <h2>Sickle cell anemia</h2>
         <P>Sickle cell anemia is an inherited form of anemia — a condition in which there aren't enough healthy red blood cells to carry adequate oxygen throughout your body.</P>
@@ -105,6 +109,9 @@
         <p>If you carry the sickle cell trait, seeing a genetic counselor before trying to conceive can help you understand your risk of having a child with sickle cell anemia. He or she can also explain possible treatments, preventive measures and
           reproductive options.</p>
       </div>
+    </div>
+    </div>
+
       <div class="second-disease">
         <h2>Cystic fibrosis</h2>
         <p>Cystic fibrosis is a progressive, genetic disease that causes persistent lung infections and limits the ability to breathe over time.</p>
@@ -145,8 +152,6 @@
           <li>CFTR modulators to target the underlying defect in the CFTR protein. Because different mutations cause different defects in the protein, the medications that have been developed so far are effective only in people with specific
             mutations.</li>
         </ol>
-
-
       </div>
       <div class="third-disease">
         <h2>TAY-SACHS DISEASE</h2>
@@ -189,12 +194,11 @@
 
       </div>
     </div>
-<<<<<<< HEAD
     <button id="sickleCell">Sickle Cell</button>
     <button id="cystic">Cystic</button>
     <button id="fragilo">Fragilo X</button>
     <button id="tay">Tay Sachs</button>
-=======
+
 
     <section id="security" class="container">
       <h2>SECURITY</h2>
@@ -205,7 +209,6 @@
       </P>
     </section>
   </div>
->>>>>>> 81ead5705464b0e7347206224aaf8bd911f79f79
 </body>
 
 </html>
