@@ -1,7 +1,5 @@
-
 function breakMaps(DNA) {
     var newList = [];
-    var DNAlist = [];
     var maplength = 3;
     var char = DNA.split("");
     var length = char.length;
@@ -28,6 +26,61 @@ function breakMaps(DNA) {
     }
     return createCounter();
 }
+function sickleCell() {
+    breakMaps(DNA)
+    var map = "GAG"
+    for(key in dnaCounter){
+        if (key === map){
+            total = DNAlist.length
+            var proportion = (dnaCounter.value)/total
+            var percentage = proportion * 100
+            alert(percentage)
+        }
+    }
+    return(percentage)
+}
+function cystic(){
+    breakMaps(DNA)
+    var map = "TTC"
+    var map2 = "TTC"
+    for(key in dnaCounter){
+        if (key === map || map2 === key){
+            total = DNAlist.length
+            var proportion = (dnaCounter.value)/total
+            var percentage = proportion * 100
+            alert(percentage)
+        }
+    }
+    return(percentage)
+}
+function fragilo(){
+    breakMaps(DNA)
+    var map = "CGG"
+    for(key in dnaCounter){
+        if (key === map){
+            total = DNAlist.length
+            var proportion = (dnaCounter.value)/total
+            var percentage = proportion * 100
+            alert(percentage)
+        }
+    }
+    return(percentage)
+}
+function tay(){
+    breakMaps(DNA)
+    var map = "CAA"
+    for(key in dnaCounter){
+        if (key === map){
+            total = DNAlist.length
+            var proportion = (dnaCounter.value)/total
+            var percentage = proportion * 100
+            alert(percentage)
+        }
+    }
+    return(percentage)
+}
+
+
 $(document).ready(function () {
     var DNA = ""
 
@@ -38,9 +91,24 @@ $(document).ready(function () {
         return (DNA)
     }
     )
-    $("#results").click(function () {
-        breakMaps(DNA)
-        $(".results").text(dnaCounter)
+    $("#sickleCell").click(function(event){
+        event.preventDefault
+        sickleCell()
     })
+    $("#cystic").click(function(event){
+        event.preventFunction
+        cystic()
+    })
+
+    $("#fragilo").click(function(event){
+        event.preventDefault
+        fragilo()
+    }) 
+
+    $("#tay").click(function(){
+        event.preventDefault
+        tay()
+    }) 
+    
 
 });
