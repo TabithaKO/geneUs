@@ -32,85 +32,95 @@ function breakMaps(DNA) {
 function sickleCell() {
     breakMaps(DNA)
     var map = "GAG"
-    for(key in dnaCounter){
-        if (key === map){
+    for (key in dnaCounter) {
+        if (key === map) {
             total = DNAlist.length
-            var proportion = (dnaCounter.value)/total
+            var proportion = parseFloat((dnaCounter[key]) / total)
             var percentage = proportion * 100
-            alert(percentage)
+            var result = Math.round(percentage)
+            alert(result)
         }
     }
-    return(percentage)
+    return (result)
 }
-function cystic(){
+function cystic() {
     breakMaps(DNA)
-    var map = "TTC"
+    var map = "TTT"
     var map2 = "TTC"
-    for(key in dnaCounter){
-        if (key === map || map2 === key){
+    for (key in dnaCounter) {
+        if (key === map) {
             total = DNAlist.length
-            var proportion = (dnaCounter.value)/total
+            var proportion = parseFloat((dnaCounter[value]) / total)
             var percentage = proportion * 100
-            alert(percentage)
-        }
-    }
-    return(percentage)
-}
-function fragilo(){
-    breakMaps(DNA)
-    var map = "CGG"
-    for(key in dnaCounter){
-        if (key === map){
+            var result = Math.round(percentage)
+            alert(result)
+
+        } else if (key === map2) {
             total = DNAlist.length
-            var proportion = (dnaCounter.value)/total
+            var proportion = parseFloat((dnaCounter[value]) / total)
             var percentage = proportion * 100
-            alert(percentage)
+            var result = Math.round(percentage)
+            alert(result)
         }
+        return (result)
     }
-    return(percentage)
 }
-function tay(){
-    breakMaps(DNA)
-    var map = "CAA"
-    for(key in dnaCounter){
-        if (key === map){
-            total = DNAlist.length
-            var proportion = (dnaCounter.value)/total
-            var percentage = proportion * 100
-            alert(percentage)
+    function fragilo() {
+        breakMaps(DNA)
+        var map = "CGG"
+        for (key in dnaCounter) {
+            if (key === map) {
+                total = DNAlist.length
+                var proportion = parseFloat((dnaCounter[value]) / total)
+                var percentage = proportion * 100
+                var result = Math.round(percentage)
+                alert(result)
+            }
         }
+        return (result)
     }
-    return(percentage)
-}
+    function tay() {
+        breakMaps(DNA)
+        var map = "CAA"
+        for (key in dnaCounter) {
+            if (key === map) {
+                total = DNAlist.length
+                var proportion = (dnaCounter.value) / total
+                var percentage = proportion * 100
+                var result = Math.round(percentage)
+                alert(result)
+            }
+        }
+        return (result)
+    }
 
 
-$(document).ready(function () {
-   
-    $("#file").submit(function (event) {
-        event.preventDefault();
-        DNA = DNA + document.getElementById("sequence").value
-        alert(DNA)
-        return (DNA)
-    }
-    )
-    $("#sickleCell").click(function(event){
-        event.preventDefault
-        sickleCell()
+    $(document).ready(function () {
+
+        $("#file").submit(function (event) {
+            event.preventDefault();
+            DNA = DNA + document.getElementById("sequence").value
+            alert(DNA)
+            return (DNA)
+        }
+        )
+        $("#sickleCell").click(function (event) {
+            event.preventDefault
+            sickleCell()
+        })
+        $("#cystic").click(function (event) {
+            event.preventFunction
+            cystic()
+        })
+
+        $("#fragilo").click(function (event) {
+            event.preventDefault
+            fragilo()
+        })
+
+        $("#tay").click(function () {
+            event.preventDefault
+            tay()
+        })
+
     })
-    $("#cystic").click(function(event){
-        event.preventFunction
-        cystic()
-    })
-
-    $("#fragilo").click(function(event){
-        event.preventDefault
-        fragilo()
-    }) 
-
-    $("#tay").click(function(){
-        event.preventDefault
-        tay()
-    }) 
-    
-
-});
