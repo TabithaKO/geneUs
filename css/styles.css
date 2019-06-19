@@ -32,7 +32,7 @@ ul li ul li{
 ul li:hover ul li{
     display: block;
     text-align: left;
-}
+
 input[type=text], select, textarea {
     width: 30%;
     padding: 12px;
@@ -63,3 +63,4 @@ input[type=text], select, textarea {
   #file{
       padding: left;
   }
+
