@@ -32,13 +32,11 @@ function breakMaps() {
 $(document).ready(function(){
     var DNA = ""
 
-    function mySequence (event){
+    $("#file").submit(function(event){
         event.preventDefault();
         DNA = DNA + document.getElementById("sequence").value 
         alert(DNA)
         return (DNA)
        }
-       mySequence(event)
-       breakMaps()
-       
-})
+)
+    });
