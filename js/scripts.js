@@ -1,4 +1,4 @@
-   
+
 function breakMaps(DNA) {
     var newList = [];
     var DNAlist = [];
@@ -15,7 +15,7 @@ function breakMaps(DNA) {
         var joined = group.join("")
         newList.push(joined)
     })
-
+    return newList
 
     function createCounter() {
         dnaCounter = {}
@@ -29,19 +29,19 @@ function breakMaps(DNA) {
     }
     return createCounter();
 }
-$(document).ready(function(){
+$(document).ready(function () {
     var DNA = ""
 
-    $("#file").submit(function(event){
+    $("#file").submit(function (event) {
         event.preventDefault();
-        DNA = DNA + document.getElementById("sequence").value 
+        DNA = DNA + document.getElementById("sequence").value
         alert(DNA)
         return (DNA)
-       }
-)
-$("#results").click(function(){
-    breakMaps(DNA)
-    $(".results").text(createCounter)
-})
+    }
+    )
+    $("#results").click(function () {
+        breakMaps(DNA)
+        $(".results").text(newList)
+    })
 
-    });
+});
