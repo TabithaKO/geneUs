@@ -15,7 +15,6 @@ function breakMaps(DNA) {
         var joined = group.join("")
         newList.push(joined)
     })
-    return newList
 
     function createCounter() {
         dnaCounter = {}
@@ -41,7 +40,7 @@ $(document).ready(function () {
     )
     $("#results").click(function () {
         breakMaps(DNA)
-        $(".results").text(newList)
+        $(".results").text(dnaCounter)
     })
 
 });
