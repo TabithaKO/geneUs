@@ -5,7 +5,7 @@ function breakMaps(DNA) {
     var maplength = 3;
     var char = DNA.split("");
     var length = char.length;
-    for (i = 0; i + maplength < length; i++) {
+    for (i = 0; i + 3 < length; i++) {
         var DNAslice = char.slice(i, maplength);
         DNAlist.push(DNAslice);
         maplength += 1;
