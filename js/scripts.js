@@ -1,10 +1,3 @@
-var DNA = ""
-
-var mySequence = function(e){
-    e.preventDefault()
-    DNA = DNA + document.getElementById("sequence").value 
-    return (DNA)
-   }
    
 function breakMaps() {
     var newList = [];
@@ -36,3 +29,16 @@ function breakMaps() {
     }
     return createCounter();
 }
+$(document).ready(function(){
+    var DNA = ""
+
+    function mySequence (e){
+        e.preventDefault()
+        DNA = DNA + document.getElementById("sequence").value 
+        alert(DNA)
+        return (DNA)
+       }
+       mySequence(e)
+       breakMaps()
+       
+})
