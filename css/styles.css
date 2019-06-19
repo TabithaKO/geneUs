@@ -1,0 +1,35 @@
+header{
+    background-image: url("../images/back1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+h1{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+}
+#whyus{
+    background-image: url("../images/gene4.jpg");
+    background-size: cover;
+    height: 50vh;
+    text-align: center;
+    color: white;
+}
+#about{
+    text-align: center;
+}
+#security{
+text-align: center;
+}
+ul li a:hover{
+    background-color: darkslategrey;
+}
+ul li ul li{
+    display: none;
+
+}
+ul li:hover ul li{
+    display: block;
+    text-align: left;
+}
