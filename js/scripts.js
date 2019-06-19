@@ -41,7 +41,7 @@ $(document).ready(function(){
 )
 $("#results").click(function(){
     breakMaps(DNA)
-    $(".results").text(dnaCounter)
+    $(".results").text(dnaCounter[nucleotide])
 })
 
     });
