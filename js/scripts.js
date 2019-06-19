@@ -32,8 +32,8 @@ function breakMaps() {
 $(document).ready(function(){
     var DNA = ""
 
-    function mySequence (e){
-        e.preventDefault()
+    function mySequence (event){
+        event.preventDefault()
         DNA = DNA + document.getElementById("sequence").value 
         alert(DNA)
         return (DNA)
