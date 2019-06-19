@@ -1,5 +1,5 @@
    
-function breakMaps() {
+function breakMaps(DNA) {
     var newList = [];
     var DNAlist = [];
     var maplength = 3;
@@ -39,4 +39,9 @@ $(document).ready(function(){
         return (DNA)
        }
 )
+$("#results").click(function(){
+    breakMaps(DNA)
+    $(".results").text(dnaCounter)
+})
+
     });
