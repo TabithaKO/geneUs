@@ -9,6 +9,10 @@ h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 50px;
 }
+#h1Size{
+    transform: scale(3.5) !important;
+    position: relative;
+}
 #whyus{
     background-image: url("../images/gene4.jpg");
     background-size: cover;

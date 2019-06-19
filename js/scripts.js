@@ -1,7 +1,6 @@
-
-function breakMaps(DNA) {
+var DNAlist = [];
+function breakMaps(DNA,DNAlist) {
     var newList = [];
-    var DNAlist = [];
     var maplength = 3;
     var char = DNA.split("");
     var length = char.length;
@@ -27,7 +26,7 @@ function breakMaps(DNA) {
         })
     }
     return createCounter();
-}
+} 
 $(document).ready(function () {
     var DNA = ""
 
@@ -38,9 +37,22 @@ $(document).ready(function () {
         return (DNA)
     }
     )
-    $("#results").click(function () {
-        breakMaps(DNA)
-        $(".results").text(dnaCounter)
-    })
-
+    
+    $("#sickelCell").click(function (e) { 
+        e.preventDefault();
+        sickelCell();
+    });
+    $("#cystic").click(function (e) { 
+        e.preventDefault();
+        cystic();
+        
+    });
+    $("#fragile").click(function (e) { 
+        e.preventDefault();
+        fragile()
+    });
+    $("#tay").click(function (e) { 
+        e.preventDefault();
+        tay();
+    });
 });
