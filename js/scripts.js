@@ -1,3 +1,6 @@
+DNAlist = []
+DNA = ""
+
 function breakMaps(DNA) {
     var newList = [];
     var maplength = 3;
@@ -82,8 +85,7 @@ function tay(){
 
 
 $(document).ready(function () {
-    var DNA = ""
-
+   
     $("#file").submit(function (event) {
         event.preventDefault();
         DNA = DNA + document.getElementById("sequence").value
