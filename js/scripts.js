@@ -1,11 +1,11 @@
-function breakMaps() {
+
+function breakMaps(DNA) {
     var newList = [];
     var DNAlist = [];
-    var lines = prompt("Enter a sequence: ");
     var maplength = 3;
-    var char = lines.split("");
+    var char = DNA.split("");
     var length = char.length;
-    for (i = 0; i + maplength < length; i++) {
+    for (i = 0; i + 3 <= length; i++) {
         var DNAslice = char.slice(i, maplength);
         DNAlist.push(DNAslice);
         maplength += 1;
@@ -15,7 +15,6 @@ function breakMaps() {
         var joined = group.join("")
         newList.push(joined)
     })
-
 
     function createCounter() {
         dnaCounter = {}
@@ -29,3 +28,19 @@ function breakMaps() {
     }
     return createCounter();
 }
+$(document).ready(function () {
+    var DNA = ""
+
+    $("#file").submit(function (event) {
+        event.preventDefault();
+        DNA = DNA + document.getElementById("sequence").value
+        alert(DNA)
+        return (DNA)
+    }
+    )
+    $("#results").click(function () {
+        breakMaps(DNA)
+        $(".results").text(dnaCounter)
+    })
+
+});
