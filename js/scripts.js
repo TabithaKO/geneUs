@@ -38,7 +38,7 @@ $(document).ready(function(){
         alert(DNA)
         return (DNA)
        }
-       mySequence(e)
+       mySequence(event)
        breakMaps()
        
 })
