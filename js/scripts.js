@@ -33,7 +33,7 @@ $(document).ready(function(){
     var DNA = ""
 
     function mySequence (event){
-        event.preventDefault()
+        event.preventDefault();
         DNA = DNA + document.getElementById("sequence").value 
         alert(DNA)
         return (DNA)
