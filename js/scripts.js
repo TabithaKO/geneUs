@@ -21,9 +21,9 @@ function breakMaps(DNA) {
         dnaCounter = {}
         newList.forEach(function (nucleotide) {
             if (nucleotide in dnaCounter) {
-                dnaCounter[nucleotide] = dnaCounter[nucleotide] += 1
+                dnaCounter[nucleotide] = dnaCounter[nucleotide] += 1;
             } else {
-                dnaCounter[nucleotide] = 1
+                dnaCounter[nucleotide] = 1;
             }
         })
     }
@@ -45,6 +45,7 @@ function sickleCell() {
             alert(result);
         }
     }
+    
     return (result)
 }
 function cystic() {
@@ -111,7 +112,7 @@ function cystic() {
         $("#sickelCell").click(function (e) { 
             e.preventDefault();
             sickelCell();
-            debugger;
+           
         });
         $("#cystic").click(function (e) { 
             e.preventDefault();
