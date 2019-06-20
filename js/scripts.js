@@ -75,9 +75,8 @@ function sickleCell() {
 function cystic() {
     breakMaps(DNA);
     var map = "TTT";
-    var map2 = "TTC";
     for (var key in dnaCounter) {
-        if (key === map || key === map2) {
+        if (key === map) {
             var total = (DNAlist.length);
             var proportion = parseFloat((dnaCounter[key]) / total);
             var percentage = proportion * 100;
