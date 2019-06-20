@@ -172,7 +172,8 @@ function cystic() {
         $("#file").submit(function (event) {
             event.preventDefault();
             DNA = DNA + document.getElementById("sequence").value;
-            alert(DNA);
+            alert("You have successfully submitted your sequence.");
+            $("#file").hide();
             chartUp()
             return (DNA);
         }
