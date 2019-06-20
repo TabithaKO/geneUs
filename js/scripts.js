@@ -1,8 +1,8 @@
-DNAlist = []
-DNA = ""
-sortedObj = []
-var topCodons = []
-chartMaker = {}
+var DNAlist = [];
+var DNA = "";
+var sortedObj = [];
+var topCodons = [];
+var chartMaker = {};
 function breakMaps(DNA) {
     var newList = [];
     var maplength = 3;
@@ -15,17 +15,17 @@ function breakMaps(DNA) {
     }
     var newList = []
     DNAlist.forEach(function (group) {
-        var joined = group.join("")
-        newList.push(joined)
+        var joined = group.join("");
+        newList.push(joined);
     })
 
     function createCounter() {
-        dnaCounter = {}
+        dnaCounter = {};
         newList.forEach(function (nucleotide) {
             if (nucleotide in dnaCounter) {
-                dnaCounter[nucleotide] = dnaCounter[nucleotide] += 1
+                dnaCounter[nucleotide] = dnaCounter[nucleotide] += 1;
             } else {
-                dnaCounter[nucleotide] = 1
+                dnaCounter[nucleotide] = 1;
             }
         })
     }
@@ -58,11 +58,11 @@ function sort(){
 
 
 function sickleCell() {
-    breakMaps(DNA)
-    var map = "GAG"
-    for (key in dnaCounter) {
+    breakMaps(DNA);
+    var map = "GAG";
+    for ( var key in dnaCounter) {
         if (key === map) {
-            total = DNAlist.length
+            var total = (DNAlist.length);
             var proportion = parseFloat((dnaCounter[key]) / total)
             var percentage = proportion * 100
             var result = Math.round(percentage)
@@ -76,41 +76,43 @@ function cystic() {
     breakMaps(DNA);
     var map = "TTT";
     var map2 = "TTC";
-    for (key in dnaCounter) {
+    for (var key in dnaCounter) {
         if (key === map || key === map2) {
-            total = DNAlist.length;
+            var total = DNAlist.length;
             var proportion = parseFloat((dnaCounter[key]) / total);
             var percentage = proportion * 100;
             var result = Math.round(percentage);
-            alert(result);
 
+            alert(result);
         }
        
         return (result);
        
     }
+    debugger;
+    return (result);
 }
     function fragilo() {
         breakMaps(DNA);
         var map = "CGG";
-        for (key in dnaCounter) {
+        for (var key in dnaCounter) {
             if (key === map) {
-                total = DNAlist.length;
+               var total = DNAlist.length;
                 var proportion = parseFloat((dnaCounter[key]) / total);
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
                 alert(result);
             }
         }
-        return (result)
+        return (result);
     }
     function tay() {
         breakMaps(DNA);
         var map = "CAA";
-        for (key in dnaCounter) {
+        for (var key in dnaCounter) {
             if (key === map) {
-                total = DNAlist.length;
-                var proportion = (dnaCounter[key]) / total;
+               var total = DNAlist.length;
+                var proportion = parseFloat((dnaCounter[key]) / total);
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
                 alert(result);
@@ -123,7 +125,7 @@ function cystic() {
     
         $("#file").submit(function (event) {
             event.preventDefault();
-            DNA = DNA + document.getElementById("sequence").value
+            DNA = DNA + document.getElementById("sequence").value;
             alert(DNA);
             return (DNA);
         }
