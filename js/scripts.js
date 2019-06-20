@@ -1,6 +1,8 @@
 DNAlist = []
 DNA = ""
-
+sortedObj = []
+var topCodons = []
+chartMaker = {}
 function breakMaps(DNA) {
     var newList = [];
     var maplength = 3;
@@ -30,7 +32,29 @@ function breakMaps(DNA) {
     return createCounter();
 
 } 
+function sort(){
+    breakMaps(DNA)
+    for (key in dnaCounter){ 
+        sortedObj.push([key, dnaCounter[key]]);
+    }
+    sortedObj.sort(function(a, b) {
+        return b[1] - a[1];
+    });
+    function topTen(){
+        sortedObj.forEach(function(codon){  
+     if(sortedObj.indexOf(codon) < 10){ 
+         topCodons.push(codon)
+     }
+        })
+        topCodons.forEach(function(codon){
+            chartMaker[codon[0]] = codon[1]
+            })
+            alert(chartMaker)
+            return (chartMaker)
+     }
+   return (topTen()) 
 
+}
 
 
 function sickleCell() {
@@ -38,19 +62,12 @@ function sickleCell() {
     var map = "GAG"
     for (key in dnaCounter) {
         if (key === map) {
-<<<<<<< HEAD
             total = DNAlist.length
             var proportion = parseFloat((dnaCounter[key]) / total)
             var percentage = proportion * 100
             var result = Math.round(percentage)
+            sort()
             alert(result + "%")
-=======
-            total = DNAlist.length;
-            var proportion = parseFloat((dnaCounter[key]) / total);
-            var percentage = proportion * 100;
-            var result = Math.round(percentage);
-            alert(result);
->>>>>>> bfd4f16d7d0d7ff0fc522bf130d93d1fa27a8c75
         }
     }
     return (result)
@@ -60,21 +77,17 @@ function cystic() {
     var map = "TTT";
     var map2 = "TTC";
     for (key in dnaCounter) {
-        if (key === map) {
+        if (key === map || key === map2) {
             total = DNAlist.length;
-            var proportion = parseFloat((dnaCounter[value]) / total);
+            var proportion = parseFloat((dnaCounter[key]) / total);
             var percentage = proportion * 100;
             var result = Math.round(percentage);
             alert(result);
 
-        } else if (key === map2) {
-            total = DNAlist.length;
-            var proportion = parseFloat((dnaCounter[value]) / total);
-            var percentage = proportion * 100;
-            var result = Math.round(percentage);
-            alert(result);
         }
+        debugger
         return (result);
+       
     }
 }
     function fragilo() {
@@ -83,7 +96,7 @@ function cystic() {
         for (key in dnaCounter) {
             if (key === map) {
                 total = DNAlist.length;
-                var proportion = parseFloat((dnaCounter[value]) / total);
+                var proportion = parseFloat((dnaCounter[key]) / total);
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
                 alert(result);
@@ -97,12 +110,13 @@ function cystic() {
         for (key in dnaCounter) {
             if (key === map) {
                 total = DNAlist.length;
-                var proportion = (dnaCounter.value) / total;
+                var proportion = (dnaCounter[key]) / total;
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
                 alert(result);
             }
         }
+        debugger
         return (result);
     }
 
@@ -115,7 +129,6 @@ function cystic() {
             return (DNA);
         }
         )
-<<<<<<< HEAD
         $("#sickleCell").click(function (event) {
             event.preventDefault
             sickleCell()
@@ -136,25 +149,3 @@ function cystic() {
         })
 
     })
-=======
-        
-        $("#sickelCell").click(function (e) { 
-            e.preventDefault();
-            sickelCell();
-            debugger;
-        });
-        $("#cystic").click(function (e) { 
-            e.preventDefault();
-            cystic();
-            
-        });
-        $("#fragile").click(function (e) { 
-            e.preventDefault();
-            fragile()
-        });
-        $("#tay").click(function (e) { 
-            e.preventDefault();
-            tay();
-        });
-    });
->>>>>>> bfd4f16d7d0d7ff0fc522bf130d93d1fa27a8c75
