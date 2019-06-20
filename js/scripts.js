@@ -1,6 +1,8 @@
-DNAlist = [];
-DNA = "";
-
+DNAlist = []
+DNA = ""
+sortedObj = []
+var topCodons = []
+chartMaker = {}
 function breakMaps(DNA) {
     var newList = [];
     var maplength = 3;
@@ -30,7 +32,29 @@ function breakMaps(DNA) {
     return createCounter();
 
 } 
+function sort(){
+    breakMaps(DNA)
+    for (key in dnaCounter){ 
+        sortedObj.push([key, dnaCounter[key]]);
+    }
+    sortedObj.sort(function(a, b) {
+        return b[1] - a[1];
+    });
+    function topTen(){
+        sortedObj.forEach(function(codon){  
+     if(sortedObj.indexOf(codon) < 10){ 
+         topCodons.push(codon)
+     }
+        })
+        topCodons.forEach(function(codon){
+            chartMaker[codon[0]] = codon[1]
+            })
+            alert(chartMaker)
+            return (chartMaker)
+     }
+   return (topTen()) 
 
+}
 
 
 function sickleCell() {
@@ -42,6 +66,7 @@ function sickleCell() {
             var proportion = parseFloat((dnaCounter[key]) / total)
             var percentage = proportion * 100
             var result = Math.round(percentage)
+            sort()
             alert(result + "%")
         }
     }
