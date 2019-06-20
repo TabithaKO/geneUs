@@ -85,7 +85,7 @@ function cystic() {
             alert(result);
 
         }
-        debugger
+       
         return (result);
        
     }
@@ -116,7 +116,6 @@ function cystic() {
                 alert(result);
             }
         }
-        debugger
         return (result);
     }
 
