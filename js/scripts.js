@@ -1,8 +1,8 @@
-DNAlist = []
-DNA = ""
-sortedObj = []
-var topCodons = []
-chartMaker = {}
+var DNAlist = [];
+var DNA = "";
+var sortedObj = [];
+var topCodons = [];
+var chartMaker = {};
 function breakMaps(DNA) {
     var newList = [];
     var maplength = 3;
@@ -60,9 +60,9 @@ function sort(){
 function sickleCell() {
     breakMaps(DNA);
     var map = "GAG";
-    for (key in dnaCounter) {
+    for ( var key in dnaCounter) {
         if (key === map) {
-            total = DNAlist.length
+            var total = (DNAlist.length);
             var proportion = parseFloat((dnaCounter[key]) / total)
             var percentage = proportion * 100
             var result = Math.round(percentage)
@@ -70,37 +70,31 @@ function sickleCell() {
             alert(result + "%")
         }
     }
-    
     return (result)
 }
 function cystic() {
     breakMaps(DNA);
     var map = "TTT";
     var map2 = "TTC";
-    for (key in dnaCounter) {
-        if (key === map) {
-            total = DNAlist.length;
-            var proportion = parseFloat((dnaCounter[value]) / total);
-            var percentage = proportion * 100;
-            var result = Math.round(percentage);
-            alert(result);
-
-        } else if (key === map2) {
-            total = DNAlist.length;
+    for (var key in dnaCounter) {
+        if (key === map || key === map2) {
+            var total = DNAlist.length;
             var proportion = parseFloat((dnaCounter[key]) / total);
             var percentage = proportion * 100;
             var result = Math.round(percentage);
+
             alert(result);
         }
-        return (result);
     }
+    debugger;
+    return (result);
 }
     function fragilo() {
         breakMaps(DNA);
         var map = "CGG";
-        for (key in dnaCounter) {
+        for (var key in dnaCounter) {
             if (key === map) {
-                total = DNAlist.length;
+               var total = DNAlist.length;
                 var proportion = parseFloat((dnaCounter[key]) / total);
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
@@ -112,9 +106,9 @@ function cystic() {
     function tay() {
         breakMaps(DNA);
         var map = "CAA";
-        for (key in dnaCounter) {
+        for (var key in dnaCounter) {
             if (key === map) {
-                total = DNAlist.length;
+               var total = DNAlist.length;
                 var proportion = parseFloat((dnaCounter[key]) / total);
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
