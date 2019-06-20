@@ -38,7 +38,7 @@ function sickleCell() {
             var proportion = parseFloat((dnaCounter[key]) / total)
             var percentage = proportion * 100
             var result = Math.round(percentage)
-            alert(result)
+            alert(result + "%")
         }
     }
     return (result)
@@ -118,7 +118,7 @@ function cystic() {
             fragilo()
         })
 
-        $("#tay").click(function () {
+        $("#tay").click(function (event) {
             event.preventDefault
             tay()
         })
