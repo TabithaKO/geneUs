@@ -162,7 +162,10 @@ function cystic() {
     }
 
     $(document).ready(function () {
-    
+        $(".first-disease").hide();
+        $(".second-disease").hide();
+        $(".third-disease").hide();
+        $(".fourth-disease").hide();
         $("#file").submit(function (event) {
             event.preventDefault();
             DNA = DNA + document.getElementById("sequence").value;
@@ -189,5 +192,6 @@ function cystic() {
             event.preventDefault
             tay()
         })
+
 
     })
