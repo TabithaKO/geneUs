@@ -195,5 +195,18 @@ function cystic() {
             event.preventDefault
             tay()
         })
+        $("#sickleInfo").click(function(){
+            $(".first-disease").toggle();
+        })
+        $("#cysticInfo").click(function(){
+            $(".second-disease").toggle();
+        })
+        $("#tayInfo").click(function(){
+            $(".third-disease").toggle();
+        })
+        $("#fragiloInfo").click(function(){
+            $(".fourth-disease").toggle();
+        })
+        
 
     })

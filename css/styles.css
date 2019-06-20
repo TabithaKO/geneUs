@@ -121,6 +121,12 @@ ol.dislist{
     
 
 }
+.introdiseases{
+    text-align: center;
+    color: grey;
+    margin: 40px;
+    font-family: 'Courgette', cursive;
+}
 .sickleCell{
     margin-top: 25px;
     font-family: 'Courgette', cursive;
