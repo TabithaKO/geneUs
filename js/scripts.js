@@ -1,5 +1,5 @@
-DNAlist = []
-DNA = ""
+DNAlist = [];
+DNA = "";
 
 function breakMaps(DNA) {
     var newList = [];
@@ -13,12 +13,12 @@ function breakMaps(DNA) {
     }
     var newList = []
     DNAlist.forEach(function (group) {
-        var joined = group.join("")
-        newList.push(joined)
+        var joined = group.join("");
+        newList.push(joined);
     })
 
     function createCounter() {
-        dnaCounter = {}
+        dnaCounter = {};
         newList.forEach(function (nucleotide) {
             if (nucleotide in dnaCounter) {
                 dnaCounter[nucleotide] = dnaCounter[nucleotide] += 1;
@@ -34,8 +34,8 @@ function breakMaps(DNA) {
 
 
 function sickleCell() {
-    breakMaps(DNA)
-    var map = "GAG"
+    breakMaps(DNA);
+    var map = "GAG";
     for (key in dnaCounter) {
         if (key === map) {
             total = DNAlist.length;
@@ -82,7 +82,7 @@ function cystic() {
                 alert(result);
             }
         }
-        return (result)
+        return (result);
     }
     function tay() {
         breakMaps(DNA);
@@ -103,7 +103,7 @@ function cystic() {
     
         $("#file").submit(function (event) {
             event.preventDefault();
-            DNA = DNA + document.getElementById("sequence").value
+            DNA = DNA + document.getElementById("sequence").value;
             alert(DNA);
             return (DNA);
         }
