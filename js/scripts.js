@@ -28,82 +28,94 @@ function breakMaps(DNA) {
         })
     }
     return createCounter();
-}
+
+} 
+
+
+
 function sickleCell() {
     breakMaps(DNA)
     var map = "GAG"
     for (key in dnaCounter) {
         if (key === map) {
+<<<<<<< HEAD
             total = DNAlist.length
             var proportion = parseFloat((dnaCounter[key]) / total)
             var percentage = proportion * 100
             var result = Math.round(percentage)
             alert(result + "%")
+=======
+            total = DNAlist.length;
+            var proportion = parseFloat((dnaCounter[key]) / total);
+            var percentage = proportion * 100;
+            var result = Math.round(percentage);
+            alert(result);
+>>>>>>> bfd4f16d7d0d7ff0fc522bf130d93d1fa27a8c75
         }
     }
     return (result)
 }
 function cystic() {
-    breakMaps(DNA)
-    var map = "TTT"
-    var map2 = "TTC"
+    breakMaps(DNA);
+    var map = "TTT";
+    var map2 = "TTC";
     for (key in dnaCounter) {
         if (key === map) {
-            total = DNAlist.length
-            var proportion = parseFloat((dnaCounter[value]) / total)
-            var percentage = proportion * 100
-            var result = Math.round(percentage)
-            alert(result)
+            total = DNAlist.length;
+            var proportion = parseFloat((dnaCounter[value]) / total);
+            var percentage = proportion * 100;
+            var result = Math.round(percentage);
+            alert(result);
 
         } else if (key === map2) {
-            total = DNAlist.length
-            var proportion = parseFloat((dnaCounter[value]) / total)
-            var percentage = proportion * 100
-            var result = Math.round(percentage)
-            alert(result)
+            total = DNAlist.length;
+            var proportion = parseFloat((dnaCounter[value]) / total);
+            var percentage = proportion * 100;
+            var result = Math.round(percentage);
+            alert(result);
         }
-        return (result)
+        return (result);
     }
 }
     function fragilo() {
-        breakMaps(DNA)
-        var map = "CGG"
+        breakMaps(DNA);
+        var map = "CGG";
         for (key in dnaCounter) {
             if (key === map) {
-                total = DNAlist.length
-                var proportion = parseFloat((dnaCounter[value]) / total)
-                var percentage = proportion * 100
-                var result = Math.round(percentage)
-                alert(result)
+                total = DNAlist.length;
+                var proportion = parseFloat((dnaCounter[value]) / total);
+                var percentage = proportion * 100;
+                var result = Math.round(percentage);
+                alert(result);
             }
         }
         return (result)
     }
     function tay() {
-        breakMaps(DNA)
-        var map = "CAA"
+        breakMaps(DNA);
+        var map = "CAA";
         for (key in dnaCounter) {
             if (key === map) {
-                total = DNAlist.length
-                var proportion = (dnaCounter.value) / total
-                var percentage = proportion * 100
-                var result = Math.round(percentage)
-                alert(result)
+                total = DNAlist.length;
+                var proportion = (dnaCounter.value) / total;
+                var percentage = proportion * 100;
+                var result = Math.round(percentage);
+                alert(result);
             }
         }
-        return (result)
+        return (result);
     }
 
-
     $(document).ready(function () {
-
+    
         $("#file").submit(function (event) {
             event.preventDefault();
             DNA = DNA + document.getElementById("sequence").value
-            alert(DNA)
-            return (DNA)
+            alert(DNA);
+            return (DNA);
         }
         )
+<<<<<<< HEAD
         $("#sickleCell").click(function (event) {
             event.preventDefault
             sickleCell()
@@ -124,3 +136,25 @@ function cystic() {
         })
 
     })
+=======
+        
+        $("#sickelCell").click(function (e) { 
+            e.preventDefault();
+            sickelCell();
+            debugger;
+        });
+        $("#cystic").click(function (e) { 
+            e.preventDefault();
+            cystic();
+            
+        });
+        $("#fragile").click(function (e) { 
+            e.preventDefault();
+            fragile()
+        });
+        $("#tay").click(function (e) { 
+            e.preventDefault();
+            tay();
+        });
+    });
+>>>>>>> bfd4f16d7d0d7ff0fc522bf130d93d1fa27a8c75
