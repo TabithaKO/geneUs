@@ -3,6 +3,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    background-position: fixed;
 }
 nav li{
     display: inline-block;
