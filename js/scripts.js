@@ -62,7 +62,7 @@ function cystic() {
 
         } else if (key === map2) {
             total = DNAlist.length;
-            var proportion = parseFloat((dnaCounter[value]) / total);
+            var proportion = parseFloat((dnaCounter[key]) / total);
             var percentage = proportion * 100;
             var result = Math.round(percentage);
             alert(result);
@@ -76,7 +76,7 @@ function cystic() {
         for (key in dnaCounter) {
             if (key === map) {
                 total = DNAlist.length;
-                var proportion = parseFloat((dnaCounter[value]) / total);
+                var proportion = parseFloat((dnaCounter[key]) / total);
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
                 alert(result);
@@ -90,7 +90,7 @@ function cystic() {
         for (key in dnaCounter) {
             if (key === map) {
                 total = DNAlist.length;
-                var proportion = (dnaCounter.value) / total;
+                var proportion = parseFloat((dnaCounter[key]) / total);
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
                 alert(result);
