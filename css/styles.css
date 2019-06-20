@@ -48,7 +48,7 @@ input[type=text], select, textarea {
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
 }
-  input[type=submit] {
+  input[type=submit]  {
     background-color: rgb(124, 20, 124);
     color: white;
     padding: 11px 18px;
@@ -57,11 +57,43 @@ input[type=text], select, textarea {
     border-radius: 4px;
     cursor: pointer;
   }
+.reset{
+    background-color: rgb(124, 20, 124);
+    color: white;
+    padding: 11px 18px;
+    padding-bottom: 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
   
   input[type=submit]:hover {
     background-color: #b7c4b8;
   }
-  #file{
-      padding: left;
+   .reset:hover {
+    background-color: #b7c4b8;
   }
+  .form{
+    padding-left:50px;
+    color:black;
+    padding-top: 230px;
+}
+ h4 {
+    color: black;
+    font-size:40px;
+    font-weight: 20px;
+}
+textarea {
+    width: 500px;
+    height: 150px;
+}
 
+  #file{
+      padding-left:100px;
+  }
+.canvas{
+    padding-left: 300px;
+}
+.buttn{
+    padding-left: 60px;
+}
