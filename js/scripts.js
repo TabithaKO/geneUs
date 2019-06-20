@@ -78,28 +78,24 @@ function cystic() {
     var map2 = "TTC";
     for (var key in dnaCounter) {
         if (key === map || key === map2) {
-            var total = DNAlist.length;
+            var total = (DNAlist.length);
             var proportion = parseFloat((dnaCounter[key]) / total);
             var percentage = proportion * 100;
             var result = Math.round(percentage);
             sort()
             alert(result);
-
-            alert(result);
         }
-       
+        debugger;
         return (result);
        
     }
-    debugger;
-    return (result);
 }
     function fragilo() {
         breakMaps(DNA);
         var map = "CGG";
         for (var key in dnaCounter) {
             if (key === map) {
-               var total = DNAlist.length;
+               var total = (DNAlist.length);
                 var proportion = parseFloat((dnaCounter[key]) / total);
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
@@ -114,7 +110,7 @@ function cystic() {
         var map = "CAA";
         for (var key in dnaCounter) {
             if (key === map) {
-               var total = DNAlist.length;
+               var total = (DNAlist.length);
                 var proportion = parseFloat((dnaCounter[key]) / total);
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
@@ -123,6 +119,7 @@ function cystic() {
             }
         }
         return (result);
+
     }
     function chartUp(){
         topCodons.forEach(function(codon){
@@ -162,7 +159,10 @@ function cystic() {
     }
 
     $(document).ready(function () {
-    
+        $(".first-disease").hide();
+        $(".second-disease").hide();
+        $(".third-disease").hide();
+        $(".fourth-disease").hide();
         $("#file").submit(function (event) {
             event.preventDefault();
             DNA = DNA + document.getElementById("sequence").value;
