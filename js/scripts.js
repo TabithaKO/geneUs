@@ -38,19 +38,11 @@ function sickleCell() {
     var map = "GAG";
     for (key in dnaCounter) {
         if (key === map) {
-<<<<<<< HEAD
             total = DNAlist.length
             var proportion = parseFloat((dnaCounter[key]) / total)
             var percentage = proportion * 100
             var result = Math.round(percentage)
             alert(result + "%")
-=======
-            total = DNAlist.length;
-            var proportion = parseFloat((dnaCounter[key]) / total);
-            var percentage = proportion * 100;
-            var result = Math.round(percentage);
-            alert(result);
->>>>>>> bfd4f16d7d0d7ff0fc522bf130d93d1fa27a8c75
         }
     }
     
@@ -116,7 +108,6 @@ function cystic() {
             return (DNA);
         }
         )
-<<<<<<< HEAD
         $("#sickleCell").click(function (event) {
             event.preventDefault
             sickleCell()
@@ -137,25 +128,3 @@ function cystic() {
         })
 
     })
-=======
-        
-        $("#sickelCell").click(function (e) { 
-            e.preventDefault();
-            sickelCell();
-           
-        });
-        $("#cystic").click(function (e) { 
-            e.preventDefault();
-            cystic();
-            
-        });
-        $("#fragile").click(function (e) { 
-            e.preventDefault();
-            fragile()
-        });
-        $("#tay").click(function (e) { 
-            e.preventDefault();
-            tay();
-        });
-    });
->>>>>>> bfd4f16d7d0d7ff0fc522bf130d93d1fa27a8c75
