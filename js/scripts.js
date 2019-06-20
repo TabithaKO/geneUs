@@ -67,6 +67,7 @@ function sickleCell() {
             var percentage = proportion * 100
             var result = Math.round(percentage)
             sort()
+            debugger;
             alert(result + "%")
         }
     }
@@ -75,23 +76,18 @@ function sickleCell() {
 function cystic() {
     breakMaps(DNA);
     var map = "TTT";
-    var map2 = "TTC";
     for (var key in dnaCounter) {
-        if (key === map || key === map2) {
-            var total = DNAlist.length;
+        if (key === map) {
+            var total = (DNAlist.length);
             var proportion = parseFloat((dnaCounter[key]) / total);
             var percentage = proportion * 100;
             var result = Math.round(percentage);
             sort()
-            alert(result);
-
-            alert(result);
+            debugger;
+            alert(result+ "%");
         }
        
-        return (result);
-       
     }
-    debugger;
     return (result);
 }
     function fragilo() {
@@ -99,12 +95,12 @@ function cystic() {
         var map = "CGG";
         for (var key in dnaCounter) {
             if (key === map) {
-               var total = DNAlist.length;
+               var total = (DNAlist.length);
                 var proportion = parseFloat((dnaCounter[key]) / total);
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
                 sort()
-                alert(result);
+                alert(result + "%");
             }
         }
         return (result);
@@ -114,15 +110,16 @@ function cystic() {
         var map = "CAA";
         for (var key in dnaCounter) {
             if (key === map) {
-               var total = DNAlist.length;
+               var total = (DNAlist.length);
                 var proportion = parseFloat((dnaCounter[key]) / total);
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
                 sort()
-                alert(result);
+                alert(result+ "%");
             }
         }
         return (result);
+
     }
     function chartUp(){
         topCodons.forEach(function(codon){
@@ -162,7 +159,10 @@ function cystic() {
     }
 
     $(document).ready(function () {
-    
+        $(".first-disease").hide();
+        $(".second-disease").hide();
+        $(".third-disease").hide();
+        $(".fourth-disease").hide();
         $("#file").submit(function (event) {
             event.preventDefault();
             DNA = DNA + document.getElementById("sequence").value;
