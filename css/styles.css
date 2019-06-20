@@ -4,10 +4,37 @@ header{
     background-size: cover;
     height: 100vh;
 }
+nav li{
+    display: inline-block;
+    margin-left: 95px;
+    padding: 30px;
+    position: relative;
+  }
 h1{
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
+    font-family: 'Courgette', cursive;
+    font-size: 70px;
+    text-align: center;
+    text-decoration: underline;
+}
+#file h4{
+    color: white;
+    font-family: 'Courgette', cursive;
+    font-size: 30px;
+    background-color: blue;
+    width: 300px;
+    
+}
+.input{
+    background-color: blue;
+    color: white;
+}
+.reset{
+    background-color: blue;
+    color : white;
+}
+body{
+    font-family: 'Quattrocento', serif;
 }
 #whyus{
     background-image: url("../images/gene4.jpg");
@@ -48,24 +75,7 @@ input[type=text], select, textarea {
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
 }
-  input[type=submit]  {
-    background-color: rgb(124, 20, 124);
-    color: white;
-    padding: 11px 18px;
-    padding-bottom: 6px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-.reset{
-    background-color: rgb(124, 20, 124);
-    color: white;
-    padding: 11px 18px;
-    padding-bottom: 6px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+  
   
   input[type=submit]:hover {
     background-color: #b7c4b8;
@@ -88,12 +98,55 @@ textarea {
     height: 150px;
 }
 
-  #file{
+#file{
       padding-left:100px;
   }
-.canvas{
-    padding-left: 300px;
+  #about{
+    font-family: 'Quattrocento', serif;
+    text-align: center;
+    font-size: 20px;
+  }
+#diseases{
+text-align: center;
+
 }
-.buttn{
-    padding-left: 60px;
+ol.dislist{
+    text-align: center;
+    list-style-position: inside;
+}
+#whyus{
+    font-size: 20px;
+    font-family: 'Quattrocento', serif;
+    font-weight: bold;
+    
+
+}
+.sickleCell{
+    margin-top: 25px;
+    font-family: 'Courgette', cursive;
+}
+.cystic{
+    margin-top: 35px;
+    padding-top: 60px;
+    font-family: 'Courgette', cursive;
+}
+.tay{
+    margin-top: 25px;
+    padding-top: 20px;
+    font-family: 'Courgette', cursive;
+}
+.fragilo{
+    margin-top: 35px;
+    padding-top: 50px;
+    font-family: 'Courgette', cursive;
+}
+.security{
+    font-size: 15px;
+}
+#security h2{
+    font-size: 20px;
+}
+#security{
+    margin-top: 20px;
+    padding-top: 30px;
 }

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento&display=swap" rel="stylesheet">
     <script src="js/jquery-3.4.1.js"></script>
     <script href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -47,9 +49,9 @@
                 <h1>geneUs</h1>
             </h1>
             <form id="file">
-                <h4>INPUT A SEQUENCE</h4>
+                <h4>Input a sequence:</h4>
                 <textarea id="sequence"></textarea> <br>
-                <input type="submit" value="submit">
+                <input class="input"type="submit" value="submit">
                 <button class="reset" type="reset" value="Reset">RESET</button>
             </form>
         </header>
@@ -83,7 +85,7 @@
         </section>
         <div class="container">
             <div id="diseases">
-                <h2>GENETIC DISORDERS</h2>
+                <h2 class="disheader">GENETIC DISORDERS</h2>
                 <p>A genetic disorder is a condition that is caused by an abnormality in an individual's DNA.
                     Abnormalities can
                     be
@@ -93,8 +95,8 @@
                     examples,
                     browse
                     through the pages below</p>
-                <h3>some of the signs of genetic disorder</h3>
-                <ol>
+                <h3>some of the signs of genetic disorder:</h3>
+                <ol class="dislist">
                     <li>Ear abnormalities</li>
                     <li>Unusually shaped eyes</li>
                     <li>Brittle or sparse hair</li>
@@ -110,7 +112,16 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6" id="first">
+            <div class="col-md-6 text-center" id="first">
+                <div class="sickleCell">
+                    <h3><span class="diseaseheader">Sickle Cell</span></h3>
+                    <p>Sickle cell anemia (sickle cell disease) is a disorder of the blood caused by an inherited
+                        abnormal hemoglobin (the oxygen-carrying protein within the red blood cells). ... The irregular
+                        sickled cells can also block blood vessels causing tissue and organ damage and pain.</p>
+                    <button class="btn btn-primary" id="sickleCell">Test Result</button>
+                    <button id="sickleInfo">More Info</button>
+                </div>
+
                 <div class="first-disease">
                     <h2>Sickle cell anemia</h2>
                     <P>Sickle cell anemia is an inherited form of anemia — a condition in which there aren't enough
@@ -200,113 +211,154 @@
                         reproductive options.</p>
                 </div>
             </div>
+            <div class="col-md-6" id="fd-pic">
+                <img src="images/pic2.jpg" class="img-fluid">
+            </div>
 
+            <div class="row">
+                <div class="col-md-6" id="sdpic">
+                    <img src="images/pic1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-6 text-center" id="second">
+                    <div class="cystic">
+                        <h3><span class="diseaseheader">Cystic Fibrosis</span></h3>
+                        <p>Cystic fibrosis (CF) is a genetic disorder that affects mostly the lungs, but also the
+                            pancreas, liver, kidneys, and intestine. Long-term issues include difficulty breathing and
+                            coughing up mucus as a result of frequent lung infections.</p>
+                        <button class="btn btn-primary" id="cystic">Test Result</button>
+                        <button id="cysticInfo">More Info</button>
+                    </div>
+                    <div class="second-disease">
+                        <h2>Cystic fibrosis</h2>
+                        <p>Cystic fibrosis is a progressive, genetic disease that causes persistent lung infections and
+                            limits the
+                            ability
+                            to breathe over time.</p>
+                        <p>In the lungs, the mucus clogs the airways and traps germs, like bacteria, leading
+                            to infections, inflammation,
+                            respiratory failure, and other complications. For this reason, minimizing contact with
+                            germs is
+                            a top
+                            concern for
+                            people with
+                            CF.</p>
+                        <p>In the pancreas, the buildup of mucus prevents the release of digestive enzymes that help the
+                            body
+                            absorb food
+                            and key nutrients, resulting in malnutrition and poor growth. In the liver, the thick mucus
+                            can
+                            block
+                            the bile
+                            duct, causing
+                            liver disease. In men, CF can affect their ability to have children.</p>
+                        <h3>Symptoms of CF</h3>
+                        <p>People with CF can have a variety of symptoms, including:</p>
+                        <ol>
+                            <li>Very salty-tasting skin</li>
+                            <li>Persistent coughing, at times with phlegm</li>
+                            <li>Frequent lung infections including pneumonia or bronchitis</li>
+                            <li>Wheezing or shortness of breath</li>
+                            <li>Poor growth or weight gain in spite of a good appetite</li>
+                            <li>Male infertility</li>
+                            <li>Frequent greasy, bulky stools or difficulty with bowel movements</li>
+                        </ol>
+                        <br clear=”right” />
+                        <img src="images/infected chest.jpeg" width="300px" height="300px" class="tay" align="left"
+                            alt="">
 
-            <div class="col-md-6" id="second">
-                <div class="second-disease">
-                    <h2>Cystic fibrosis</h2>
-                    <p>Cystic fibrosis is a progressive, genetic disease that causes persistent lung infections and
-                        limits the
-                        ability
-                        to breathe over time.</p>
-                    <p>In the lungs, the mucus clogs the airways and traps germs, like bacteria, leading
-                        to infections, inflammation,
-                        respiratory failure, and other complications. For this reason, minimizing contact with germs is
-                        a top
-                        concern for
-                        people with
-                        CF.</p>
-                    <p>In the pancreas, the buildup of mucus prevents the release of digestive enzymes that help the
-                        body
-                        absorb food
-                        and key nutrients, resulting in malnutrition and poor growth. In the liver, the thick mucus can
-                        block
-                        the bile
-                        duct, causing
-                        liver disease. In men, CF can affect their ability to have children.</p>
-                    <h3>Symptoms of CF</h3>
-                    <p>People with CF can have a variety of symptoms, including:</p>
-                    <ol>
-                        <li>Very salty-tasting skin</li>
-                        <li>Persistent coughing, at times with phlegm</li>
-                        <li>Frequent lung infections including pneumonia or bronchitis</li>
-                        <li>Wheezing or shortness of breath</li>
-                        <li>Poor growth or weight gain in spite of a good appetite</li>
-                        <li>Male infertility</li>
-                        <li>Frequent greasy, bulky stools or difficulty with bowel movements</li>
-                    </ol>
-                    <br clear=”right” />
-                    <img src="images/infected chest.jpeg" width="300px" height="300px" class="tay" align="left" alt="">
-
-                    <h3>Diagnosis and Genetics</h3>
-                    <p>People with only one copy of the defective CF gene are called carriers, but they do not have the
-                        disease. Each
-                        time two CF carriers have a child, the chances are:</p>
-                    <ul>
-                        <li>25 percent (1 in 4) the child will have CF</li>
-                        <li>50 percent (1 in 2) the child will be a carrier but will not have CF</li>
-                        <li>5 percent (1 in 4) the child will not be a carrier and will not have CF</li>
-                    </ul>
-                    <p>The defective CF gene contains a slight abnormality called a mutation.</p>
-                    <p>There are more than 1,700 known mutations of the disease. Most genetic tests only screen for the
-                        most
-                        common CF
-                        mutations. Therefore, the test results may indicate a person who is a carrier of the CF gene is
-                        not a
-                        carrier.</p>
-                    <h3>Advisory</h3>
-                    <p>To couple at risk of giving birth to a child with the the disease;<br>Diagnosing cystic fibrosis
-                        is
-                        done through
-                        a newborn screening, a sweat test, a genetic or carrier test, and a clinical evaluation </p>
-                    <h3>Management</h3>
-                    Cystic fibrosis are managed through a combination of the follwing therapies;
-                    <ol>
-                        <li>Airway clearance to help loosen and get rid of the thick mucus that can build up in the
-                            lungs.</li>
-                        <li>Inhaled medicines to open the airways or thin the mucus. These are liquid medicines that are
-                            made
-                            into a mist
-                            or aerosol and then inhaled through a nebulizer and include antibiotics to fight lung
-                            infections and
-                            therapies
-                            to help keep
-                            the airways clear.</li>
-                        <li>Pancreatic enzyme supplement capsules to improve the absorption of vital nutrients. These
-                            supplements are
-                            taken with every meal and most snacks. People with CF also usually take multivitamins.</li>
-                        <li>An individualized fitness plan to help improve energy, lung function, and overall health
-                        </li>
-                        <li>CFTR modulators to target the underlying defect in the CFTR protein. Because different
-                            mutations
-                            cause
-                            different defects in the protein, the medications that have been developed so far are
-                            effective only
-                            in people
-                            with specific
-                            mutations.</li>
-                    </ol>
+                        <h3>Diagnosis and Genetics</h3>
+                        <p>People with only one copy of the defective CF gene are called carriers, but they do not have
+                            the
+                            disease. Each
+                            time two CF carriers have a child, the chances are:</p>
+                        <ul>
+                            <li>25 percent (1 in 4) the child will have CF</li>
+                            <li>50 percent (1 in 2) the child will be a carrier but will not have CF</li>
+                            <li>5 percent (1 in 4) the child will not be a carrier and will not have CF</li>
+                        </ul>
+                        <p>The defective CF gene contains a slight abnormality called a mutation.</p>
+                        <p>There are more than 1,700 known mutations of the disease. Most genetic tests only screen for
+                            the
+                            most
+                            common CF
+                            mutations. Therefore, the test results may indicate a person who is a carrier of the CF gene
+                            is
+                            not a
+                            carrier.</p>
+                        <h3>Advisory</h3>
+                        <p>To couple at risk of giving birth to a child with the the disease;<br>Diagnosing cystic
+                            fibrosis
+                            is
+                            done through
+                            a newborn screening, a sweat test, a genetic or carrier test, and a clinical evaluation </p>
+                        <h3>Management</h3>
+                        Cystic fibrosis are managed through a combination of the follwing therapies;
+                        <ol>
+                            <li>Airway clearance to help loosen and get rid of the thick mucus that can build up in the
+                                lungs.</li>
+                            <li>Inhaled medicines to open the airways or thin the mucus. These are liquid medicines that
+                                are
+                                made
+                                into a mist
+                                or aerosol and then inhaled through a nebulizer and include antibiotics to fight lung
+                                infections and
+                                therapies
+                                to help keep
+                                the airways clear.</li>
+                            <li>Pancreatic enzyme supplement capsules to improve the absorption of vital nutrients.
+                                These
+                                supplements are
+                                taken with every meal and most snacks. People with CF also usually take multivitamins.
+                            </li>
+                            <li>An individualized fitness plan to help improve energy, lung function, and overall health
+                            </li>
+                            <li>CFTR modulators to target the underlying defect in the CFTR protein. Because different
+                                mutations
+                                cause
+                                different defects in the protein, the medications that have been developed so far are
+                                effective only
+                                in people
+                                with specific
+                                mutations.</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 text-center">
+                <div class="tay">
+                    <h3><span class="diseaseheader">Tay-Sachs</span></h3>
+                    <p>Tay-Sachs disease is a rare inherited disorder that progressively destroys nerve cells (neurons)
+                        in the brain and spinal cord. The most common form of Tay-Sachs disease becomes apparent in
+                        infancy</p>
+                    <button class="btn btn-primary" id="tay">Test Result</button>
+                    <button id="tayInfo">More Info</button>
+                </div>
+            </div>
+            <div class="col-md-6" id="tdpic">
+                <img src="images/gene1.jpg" class="img-fluid">
+
+
                 <div class="third-disease">
                     <h2>TAY-SACHS DISEASE</h2>
 
                     <p><strong>Healthy babies develop vision, movement, hearing, and other vital functions in part
                             because
                             enzymes
-                            clear out fatty protein and other unwanted material that can interfere with growth.</strong>
+                            clear out fatty protein and other unwanted material that can interfere with
+                            growth.</strong>
                         But a baby with <strong>Tay-Sachs disease</strong> is born without one of those important
                         enzymes,
-                        <em>hexosaminidase A </em>(HEXA). So, as those fatty proteins build up in the brain, they hurt
+                        <em>hexosaminidase A </em>(HEXA). So, as those fatty proteins build up in the brain, they
+                        hurt
                         the
                         baby's
                         <strong>sight, hearing,
                             movement, and mental development.</strong>
-                        A child can only get Tay-Sachs by inheriting the gene for it from both parents. Tay-Sachs can be
+                        A child can only get Tay-Sachs by inheriting the gene for it from both parents. Tay-Sachs
+                        can be
                         detected
                         before birth, so couples who are thinking of having children may want to get a blood test to
                         find
@@ -316,7 +368,8 @@
                         align="right" alt="">
 
                     <h3>Screening/Prenatal Diagnosis</h3>
-                    Couples who are considering having children — or are already expecting — can get screened for the
+                    Couples who are considering having children — or are already expecting — can get screened for
+                    the
                     Tay-Sachs gene
                     with a simple blood test. If both the mother and father carry the Tay-Sachs gene, an
                     obstetrician/gynecologist
@@ -339,13 +392,16 @@
                     <h3>Signs and Symptoms</h3>
                     Kids are usually tested for Tay-Sachs after having hearing, sight, and movement problems.
                     <ul>
-                        <li>A baby born with Tay-Sachs develops normally in the first 3 to 6 months of life. During the
+                        <li>A baby born with Tay-Sachs develops normally in the first 3 to 6 months of life. During
+                            the
                             next
                             months —
-                            or even years — the baby will progressively lose the ability to see, hear, and move.</li>
+                            or even years — the baby will progressively lose the ability to see, hear, and move.
+                        </li>
                         <li>A red spot will develop in the back of the child's eyes.</li>
                         <li>The child will stop smiling, crawling, turning over, and reaching out for things</li>
-                        <li>By age 2, the child may have seizures and become completely disabled. Death usually occurs
+                        <li>By age 2, the child may have seizures and become completely disabled. Death usually
+                            occurs
                             by
                             the time the
                             child is 5 years old.</li>
@@ -353,21 +409,25 @@
                     <img src="images/taysachs2.jpg" width="300px" height="300px" class="tay" align="left" alt="">
 
                     <p><strong>In rare forms of the disease;</strong></p>
-                    <p>Those problems may not appear until the child is 2 to 5 years old. The disease progresses more
+                    <p>Those problems may not appear until the child is 2 to 5 years old. The disease progresses
+                        more
                         slowly, but
                         death usually occurs by the time the child is 15 years old.</p>
                     <p>In another, milder form of Tay-Sachs (called late-onset Tay-Sachs), the disease causes muscle
                         weakness and
                         slurred speech, but sight, hearing, and mental capabilities remain intact.</p><br>
                     <h3>Helping a Child With Tay-Sachs</h3>
-                    <p>There is no cure for any form of Tay-Sachs disease. But doctors may be able to help a child cope
+                    <p>There is no cure for any form of Tay-Sachs disease. But doctors may be able to help a child
+                        cope
                         with its
                         symptoms by prescribing medicines to relieve pain, manage seizures, and control muscle
                         spasticity.<br>If your
-                        child has been diagnosed with Tay-Sachs or both you and your partner are carriers of the gene,
+                        child has been diagnosed with Tay-Sachs or both you and your partner are carriers of the
+                        gene,
                         talk
                         to your
-                        doctor or a genetic counselor about ongoing research. You also might seek support from a group
+                        doctor or a genetic counselor about ongoing research. You also might seek support from a
+                        group
                         such
                         as the
                         National Tay-Sachs and Allied Diseases Foundation or the March of Dimes Foundation.</p><br
@@ -378,7 +438,20 @@
 
 
 
-            <div class="col-md-6" id="four">
+            <div class="row">
+
+                <div class="col-md-6" id="tdpic">
+                    <img src="images/gene6.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-6 text-center fragilo" id="four">
+                    <h3><span class="diseaseheader">Fragile X Syndrome</span></h3>
+                    <p>Fragile X syndrome is a genetic condition that causes a range of developmental problems including
+                        learning disabilities and cognitive impairment. Usually, males are more severely affected by
+                        this disorder than females. Affected individuals usually have delayed development of speech and
+                        language by age 2.</p>
+                    <button class="btn btn-primary" id="fragilo">Test Result</button>
+                    <button id="fragiloInfo">More Info</button>
+                </div>
                 <div class="fourth-disease">
                     <h3>FRAGILE-X SYNDROME</h3>
 
@@ -447,31 +520,19 @@
                 </div>
             </div>
         </div>
+    </div>
+    </div>
 
-        <div class="canvas">
-            <div class=buttn>
-                <button class="btn btn-primary" id="sickleCell">Sickle Cell</button>
-                <button class="btn btn-primary" id="cystic">Cystic</button>
-                <button class="btn btn-primary" id="fragilo">Fragile-X</button>
-                <button class="btn btn-primary" id="tay">Tay Sachs</button> <br>
-
-            </div> <br>
-
-            <div class=can>
-                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-            </div>
-        </div>
-
-        <section id="security" class="container">
-            <h2>SECURITY</h2>
-            <img src="images/privacy.jpg" alt="privacy" width="300" height="300">
-            <P>We are aware of the importance of your genetic data,
-                and we do not take any chances when it comes to protecting it. We
-                don't want your information to be exposed, and not having it online seems to us to be the maximum level
-                of
-                security we can implement.
-            </P>
-        </section>
+    <section id="security" class="container">
+        <h2>SECURITY</h2>
+        <img src="images/privacy.jpg" alt="privacy" width="300" height="300">
+        <P><span class="security">We are aware of the importance of your genetic data,
+            and we do not take any chances when it comes to protecting it. We
+            don't want your information to be exposed, and not having it online seems to us to be the maximum level
+            of
+            security we can implement.</span>
+        </P>
+    </section>
 
     </div>
 
