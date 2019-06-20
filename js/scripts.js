@@ -99,7 +99,6 @@ function cystic() {
     }
 
     $(document).ready(function () {
-        var DNA = "";
     
         $("#file").submit(function (event) {
             event.preventDefault();
