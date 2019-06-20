@@ -3,7 +3,7 @@
   height: 100%;
   width: 100%;
   padding-left: 50px;
-  padding-right: 20px;
+  padding-right: 25px;
 }
 header{
     background-image: url("../images/back1.jpg");
@@ -39,22 +39,4 @@ ul li ul li{
 ul li:hover ul li{
     display: block;
     text-align: left;
-<<<<<<< HEAD
-=======
-}
-
-input[type=text], select, textarea {
-    width: 30%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 10px;
-    resize: vertical;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
->>>>>>> bfd4f16d7d0d7ff0fc522bf130d93d1fa27a8c75
 }
