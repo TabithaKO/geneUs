@@ -47,10 +47,10 @@
         <h1>geneUs</h1>
       </h1>
       <form id="file">
-        <p>INPUT A SEQUENCE</p>
-        <textarea id="sequence"></textarea>
+        <h4>INPUT A SEQUENCE</h4>
+        <textarea id="sequence"></textarea> <br>
         <input type="submit" value="submit">
-        <button type="reset" value="Reset">RESET</button>
+        <button class="reset" type="reset" value="Reset">RESET</button>
       </form>
     </header>
 
@@ -108,7 +108,7 @@
               <P>Sickle cell anemia is an inherited form of anemia — a condition in which there aren't enough healthy
                 red
                 blood cells to carry adequate oxygen throughout your body.</P><img src="images/bleeding.jpg"
-                width="450px" height="450px" class="tay" align="right" alt="">
+                width="300px" height="300px" class="tay" align="right" alt="">
               <h3>Symptoms</h3>
               <ol>
                 <li>Anameia</li>
@@ -175,7 +175,6 @@
           </div>
 
 
-
           <div class="col-md-6" id="second">
             <div class="second-disease">
               <h2>Cystic fibrosis</h2>
@@ -206,7 +205,7 @@
                 <li>Frequent greasy, bulky stools or difficulty with bowel movements</li>
               </ol>
               <br clear=”right” />
-              <img src="images/infected chest.jpeg" width="400px" height="300px" class="tay" align="left" alt="">
+              <img src="images/infected chest.jpeg" width="300px" height="300px" class="tay" align="left" alt="">
 
               <h3>Diagnosis and Genetics</h3>
               <p>People with only one copy of the defective CF gene are called carriers, but they do not have the
@@ -269,7 +268,7 @@
                     before birth, so couples who are thinking of having children may want to get a blood test to find
                     out whether
                     their child would be
-                    likely to have it.</p><img src="images/tay-sachs.jpg" width="600px" height="450px" class="tay"
+                    likely to have it.</p><img src="images/tay-sachs.jpg" width="300px" height="300px" class="tay"
                     align="right" alt="">
 
                   <h3>Screening/Prenatal Diagnosis</h3>
@@ -303,7 +302,7 @@
                       the time the
                       child is 5 years old.</li>
                   </ul><br clear=”right” />
-                  <img src="images/taysachs2.jpg" width="400px" height="300px" class="tay" align="left" alt="">
+                  <img src="images/taysachs2.jpg" width="300px" height="300px" class="tay" align="left" alt="">
 
                   <p><strong>In rare forms of the disease;</strong></p>
                   <p>Those problems may not appear until the child is 2 to 5 years old. The disease progresses more
@@ -311,7 +310,7 @@
                     death usually occurs by the time the child is 15 years old.</p>
                   <p>In another, milder form of Tay-Sachs (called late-onset Tay-Sachs), the disease causes muscle
                     weakness and
-                    slurred speech, but sight, hearing, and mental capabilities remain intact.</p>
+                    slurred speech, but sight, hearing, and mental capabilities remain intact.</p><br>
                   <h3>Helping a Child With Tay-Sachs</h3>
                   <p>There is no cure for any form of Tay-Sachs disease. But doctors may be able to help a child cope
                     with its
@@ -341,7 +340,7 @@
                 number of people who have FXS is unknown, but it has been estimated that about 1.4 per 10,000 males and
                 0.9 per 10,000 females have
                 FXS. </p>
-              <h3>Signs and symptoms</h3><img src="images/fragile-x.jpeg" width="500px" height="300px" class="tay"
+              <h3>Signs and symptoms</h3><img src="images/fragile-x.jpeg" width="300px" height="300px" class="tay"
                 align="right" alt="">
 
               <p>Fragile X syndrome have five general categories where individuals often show altered or arrested
@@ -366,18 +365,34 @@
                 <li><strong>Also Common:</strong>
                   large ears, speech impairment, anxiety, double jointed, enlarged head, enlarged testicles, flat feet,
                   lazy eye, long thin face, prominent jaw, scoliosis, single line on palm, sleep disorder, sunken chest,
-                  or tremor</li>
-              </ul><br clear=”right” />
+                  or tremor</li></ul><br clear=”right” />
+                  <h3>Helping a child with FXS</h3>     
+                    <p> Currently, there is no cure for Fragile X syndrome nor are there any definitive treatments other than helping the individual develop to their maximal potential through education; therapies such as speech, language, behavioral, and physical; and other therapies. Fragile X detects FMR1 DNA (PCR or Southern blot methods)</p>
+                       <ul>
+                         <li>Medication therapy may only help certain individuals with certain severe problems and should be prescribed only by the patients' doctors; there is no medication that can cure Fragile X syndrome.</li>
+                         
+                         <li>Adults with Fragile X syndrome may benefit from a team approach to help the patient adjust to independent living, if possible.</li>
+                         <li>If a family member has been diagnosed with Fragile X syndrome, other family members may want to be tested to determine if they carry a Fragile X chromosome; there are several accurate DNA tests available for gene testing (see above) and for determining the amount of FMRP produced. Prenatal tests are also available.
+                         Research is ongoing; gene therapy, gene activation, and FMRP replacement therapy are several areas that may lead to treatments, or possible cure or prevention, in the future.</li></ul>
+              
         </div>
       </div>
     </div>
 
+  <div class="canvas">
+      <div class=buttn>
+          <button class="btn btn-primary" id="sickleCell">Sickle Cell</button>
+          <button class="btn btn-primary" id="cystic">Cystic</button>
+          <button class="btn btn-primary" id="fragilo">Fragile-X</button>
+          <button class="btn btn-primary" id="tay">Tay Sachs</button> <br>
 
-        <button id="sickleCell">Sickle Cell</button>
-        <button id="cystic">Cystic</button>
-        <button id="fragilo">Fragilo X</button>
-        <button id="tay">Tay Sachs</button>
-
+      </div> <br>
+    
+     <div class=can>
+        <canvas class="myChart" width="500" height="300" style="border:1px solid #000000;">
+          </canvas>
+     </div>
+  </div>
 
         <section id="security" class="container">
           <h2>SECURITY</h2>
