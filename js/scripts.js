@@ -85,6 +85,9 @@ function cystic() {
 
             alert(result);
         }
+       
+        return (result);
+       
     }
     debugger;
     return (result);
