@@ -49,7 +49,6 @@ function sort(){
         topCodons.forEach(function(codon){
             chartMaker[codon[0]] = codon[1]
             })
-            alert(chartMaker)
             return (chartMaker)
      }
    return (topTen()) 
@@ -69,6 +68,7 @@ function sickleCell() {
             sort()
             alert(result + "%")
         }
+        
     }
     return (result)
 }
@@ -82,9 +82,9 @@ function cystic() {
             var percentage = proportion * 100;
             var result = Math.round(percentage);
             sort()
-            alert(result);
+            alert(result + "%");
         }
-        debugger;
+        
         return (result);
        
     }
@@ -99,7 +99,7 @@ function cystic() {
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
                 sort()
-                alert(result);
+                alert(result + "%");
             }
         }
         return (result);
@@ -114,54 +114,59 @@ function cystic() {
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
                 sort()
-                alert(result);
+                alert(result + "%");
             }
         }
         return (result);
 
     }
-    function chartUp(){
-        topCodons.forEach(function(codon){
-            popChart.data.labels.push(codon[0])
-            popChart.data.datasets[0].data.push(codon[1])
+    
+    function chartUp() {
+        var datapoints = []
+        topCodons.forEach(function(codon){ 
+            datapoints.push({})
         })
-        var myChart = $(".myChart")
-        var popChart = new Chart (myChart,{ 
-            type: "doughnut",
-            data : { 
-        labels : [] ,
-        datasets : [{label : "Top 10 Codons",
-        data : []
-        }]
-        },
-        options: {
-        title: { 
-        display: true,
-        text: "Top 10 Codons",
-        fontSize: 25
-        },
-        legend:{
-        display : true,
-        position : "right",
-        labels : { 
-        fontColor : 000
-        },
-        layout :{
-        padding : {
-        left: 50
-        }
-        }
-    }
-        }
-    })
+        datapoints.forEach(function(obj){
+            obj.y = topCodonVal[datapoints.indexOf(obj)]
+           obj.name = topCodonStr[datapoints.indexOf(obj)]
+        })
 
-    }
+        var chart = new CanvasJS.Chart("chartContainer", {
+            theme: "dark2",
+            exportFileName: "Doughnut Chart",
+            exportEnabled: true,
+            animationEnabled: true,
+            title:{
+                text: "Top Codons"
+            },
+            legend:{
+                cursor: "pointer",
+                itemclick: explodePie
+            },
+            data: [{
+                type: "doughnut",
+                innerRadius: 90,
+                showInLegend: true,
+                toolTipContent: "<b>{name}</b>: ${y} (#percent%)",
+                indexLabel: "{name} - #percent%",
+                dataPoints:  []
+                
+            }]
+        
+        });
+        chart.render();
+        }
+        
+    
+
+    
 
     $(document).ready(function () {
         $(".first-disease").hide();
         $(".second-disease").hide();
         $(".third-disease").hide();
         $(".fourth-disease").hide();
+
         $("#file").submit(function (event) {
             event.preventDefault();
             DNA = DNA + document.getElementById("sequence").value;
