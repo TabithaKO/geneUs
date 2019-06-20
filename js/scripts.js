@@ -82,6 +82,7 @@ function cystic() {
             var proportion = parseFloat((dnaCounter[key]) / total);
             var percentage = proportion * 100;
             var result = Math.round(percentage);
+            sort()
             alert(result);
 
         }
@@ -99,6 +100,7 @@ function cystic() {
                 var proportion = parseFloat((dnaCounter[key]) / total);
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
+                sort()
                 alert(result);
             }
         }
@@ -113,10 +115,47 @@ function cystic() {
                 var proportion = (dnaCounter[key]) / total;
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
+                sort()
                 alert(result);
             }
         }
         return (result);
+    }
+    function chartUp(){
+        topCodons.forEach(function(codon){
+            popChart.data.labels.push(codon[0])
+            popChart.data.datasets[0].data.push(codon[1])
+        })
+        var myChart = $(".myChart")
+        var popChart = new Chart (myChart,{ 
+            type: "doughnut",
+            data : { 
+        labels : [] ,
+        datasets : [{label : "Top 10 Codons",
+        data : []
+        }]
+        },
+        options: {
+        title: { 
+        display: true,
+        text: "Top 10 Codons",
+        fontSize: 25
+        },
+        legend:{
+        display : true,
+        position : "right",
+        labels : { 
+        fontColor : 000
+        },
+        layout :{
+        padding : {
+        left: 50
+        }
+        }
+    }
+        }
+    })
+
     }
 
     $(document).ready(function () {
@@ -125,6 +164,7 @@ function cystic() {
             event.preventDefault();
             DNA = DNA + document.getElementById("sequence").value
             alert(DNA);
+            chartUp()
             return (DNA);
         }
         )
