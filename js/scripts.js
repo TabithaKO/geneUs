@@ -66,6 +66,7 @@ function sickleCell() {
             var percentage = proportion * 100
             var result = Math.round(percentage)
             sort()
+            debugger;
             alert(result + "%")
         }
         
@@ -88,6 +89,7 @@ function cystic() {
         return (result);
        
     }
+    return (result);
 }
     function fragilo() {
         breakMaps(DNA);
@@ -114,7 +116,7 @@ function cystic() {
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
                 sort()
-                alert(result + "%");
+                alert(result+ "%");
             }
         }
         return (result);
