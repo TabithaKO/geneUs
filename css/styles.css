@@ -1,3 +1,6 @@
+body{
+  font-family: 'Merienda', cursive;  
+}
 header{
     background-image: url("../images/back1.jpg");
     background-repeat: no-repeat;
@@ -90,7 +93,7 @@ input[type=text], select, textarea {
     padding-top: 230px;
 }
  h4 {
-    color: black;
+     color: white;
     font-size:40px;
     font-weight: 20px;
 }
