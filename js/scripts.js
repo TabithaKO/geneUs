@@ -67,7 +67,10 @@ function sickleCell() {
             var result = Math.round(percentage)
             sort()
             debugger;
-            alert(result + "%")
+            bootbox.alert({
+                message: result + '%',
+                className: 'rubberBand animated'
+            });
         }
         
     }
@@ -83,7 +86,10 @@ function cystic() {
             var percentage = proportion * 100;
             var result = Math.round(percentage);
             sort()
-            alert(result + "%");
+            bootbox.alert({
+                message: result + '%',
+                className: 'rubberBand animated'
+            });
         }
         
         return (result);
@@ -101,7 +107,10 @@ function cystic() {
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
                 sort()
-                alert(result + "%");
+                bootbox.alert({
+                    message: result +'%',
+                    className: 'rubberBand animated'
+                });
             }
         }
         return (result);
@@ -116,7 +125,10 @@ function cystic() {
                 var percentage = proportion * 100;
                 var result = Math.round(percentage);
                 sort()
-                alert(result+ "%");
+                bootbox.alert({
+                    message: (result +'%'),
+                    className: 'rubberBand animated'
+                });
             }
         }
         return (result);
@@ -172,7 +184,10 @@ function cystic() {
         $("#file").submit(function (event) {
             event.preventDefault();
             DNA = DNA + document.getElementById("sequence").value;
-            alert("You have successfully submitted your sequence.");
+            bootbox.alert({
+                message: "You have successfully submitted your sequence.",
+                className: 'rubberBand animated'
+            });
             $("#file").hide();
             chartUp()
             return (DNA);
